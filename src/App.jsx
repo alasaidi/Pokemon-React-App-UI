@@ -9,11 +9,10 @@ import Header from "./components/header/Header.jsx";
 const App = () => {
   return (
     <div>
-      <h2 className="header">welcome to react page</h2>
       <Header />
       <div className="pokemonContainer">
         <Pokemon pokemon_data={pokemon_data} stylename="custom-style-1" />
-        <Pokemon pokemon_data={pokemon_data} stylename="custom-style-2" />
+        {/* <Pokemon pokemon_data={pokemon_data} stylename="custom-style-2" /> */}
       </div>
     </div>
   );
