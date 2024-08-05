@@ -20,7 +20,7 @@ const Pokemon = ({ pokemon_data = {}, stylename = "" }) => {
         <div className="details-container">
           <div className="name-description">
             <h2>{pokemon.name}</h2>
-            <p>{pokemon.type}</p>
+            {/* <p>{pokemon.type}</p> */}
           </div>
         </div>
       </div>
