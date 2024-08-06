@@ -9,15 +9,21 @@ const axiosService = axios.create({
     // "Access-Control-Allow-Headers": "*",
     // "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE",
   },
+  withCredentials: true,
 });
 
-axios.interceptors.request.use(
+// Add a request interceptor
+axiosService.interceptors.request.use(
   (config) => {
+    // Get the token from localStorage or wherever you store it after login
+    const token = localStorage.getItem("token");
+    if (token) {
+      config.headers["Authorization"] = `Bearer ${token}`;
+    }
     return config;
   },
   (error) => {
-    console.error(error);
-    Promise.reject(error);
+    return Promise.reject(error);
   }
 );
 

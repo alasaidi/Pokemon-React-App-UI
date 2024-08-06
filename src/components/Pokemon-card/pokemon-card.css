@@ -60,6 +60,17 @@
   z-index: 1;
   box-sizing: inherit;
 }
+.abilities-description {
+  z-index: 1;
+  box-sizing: inherit;
+  margin: 0px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
 
 .name-description h2 {
   margin: 0px;
