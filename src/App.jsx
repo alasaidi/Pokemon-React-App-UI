@@ -7,6 +7,7 @@ import pokemon_data from "./components/data/pokemon_data/pokemon-data.js";
 import Header from "./components/header/Header.jsx";
 import { getPokemon } from "./services/pokemonServices.js";
 import PlayerPokemon from "./components/Pokemon-card/PlayerPokemon.jsx";
+import { Login } from "./components/Pages/login-page/Login.jsx";
 
 const App = () => {
   const [player, setPlayer] = useState({});
@@ -33,15 +34,16 @@ const App = () => {
   }, [player]);
 
   return (
-    <div>
-      <Header />
-      <div className="pokemonContainer">
-        {/* <Pokemon pokemon_data={pokemon_data} stylename="custom-style-1" /> */}
-        <PlayerPokemon pokemon_data={player} stylename="custom-style-2" />
+    <div className="body">
+      {/* <Header /> */}
+      <Login />
+      {/* <div className="pokemonContainer"> */}
+      {/* <Pokemon pokemon_data={pokemon_data} stylename="custom-style-1" /> */}
+      {/* <PlayerPokemon pokemon_data={player} stylename="custom-style-2" />
         <div>
           <p>{JSON.stringify(player, null, 10)}</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
