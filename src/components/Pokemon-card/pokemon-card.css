@@ -5,7 +5,6 @@
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   margin: 10px 0;
-  transform: matrix3d(0.999374, 0, 0.0353793, 0, -0.00384682, 0.994071, 0.108663, 0, -0.0351695, -0.108731, 0.993449, 0, 0, 0, 0.000996613, 1);
 }
 
 .container.visible {
