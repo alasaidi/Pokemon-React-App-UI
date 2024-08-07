@@ -10,3 +10,13 @@ export const getPokemon = async () => {
     throw error;
   }
 };
+
+export const create = async (data = {}) => {
+  try {
+    const result = await axiosService.post("players/api/login", data);
+    return result;
+  } catch (error) {
+    console.error("Error Login Plyaer:", error.response?.data || error.message);
+    throw error;
+  }
+};
