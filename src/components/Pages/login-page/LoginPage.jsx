@@ -1,7 +1,7 @@
 import React from "react";
 import "./Login.css";
 
-export const Login = () => {
+export const LoginPage = () => {
   return (
     <div className="login-page">
       <div className="login-container">
