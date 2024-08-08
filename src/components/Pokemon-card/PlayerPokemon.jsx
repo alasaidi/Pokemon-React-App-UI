@@ -17,17 +17,17 @@ const PlayerPokemon = ({ pokemon_data = [], stylename = "" }) => {
   return pokemon_data.map((pokemon) => (
     <div className={`container ${stylename} ${isVisible ? "visible" : ""}`} key={pokemon_data._id || pokemon_data.id}>
       <div className="character-card">
-        <div className="image-container">
+        {/* <div className="image-container">
           <img src={pokemon.picture} alt={pokemon.name} />
-        </div>
+        </div> */}
         <div className="details-container">
           <div className="name-description">
-            <h2>{pokemon.name}</h2>
-            <p>{pokemon.type.join(", ")}</p>
+            <h2>{pokemon.pokemonId}</h2>
+            <p>{pokemon.nickname}</p>
           </div>
-          <div className="abilities-description">
+          {/* <div className="abilities-description">
             <p>Abilities: {pokemon.abilities.join(", ")}</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

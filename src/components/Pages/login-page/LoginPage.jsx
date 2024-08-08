@@ -34,11 +34,11 @@ export const LoginPage = () => {
           <h2>Log in to your Pokémon Account </h2>
           <form className="sign-in-form">
             <div className="input-wrapper">
-              <input className="input" type="text" id="email" name="Email" placeholder="Username" value={request.Email} onChange={handleInput} />
+              <input className="input" type="text" id="email" name="email" placeholder="Username" value={request.email} onChange={handleInput} />
             </div>
             <div className="input-wrapper">
               <div className="password-input-field-wrapper">
-                <input className="input password-input" type="text" id="password" name="Password" placeholder="Password" value={request.Password} onChange={handleInput} />
+                <input className="input password-input" type="text" id="password" name="password" placeholder="Password" value={request.password} onChange={handleInput} />
               </div>
             </div>
             <button type="button" className="button sign-in-button" id="accept" value="Log In" onClick={handleSubmit}>
