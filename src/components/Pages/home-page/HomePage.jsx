@@ -6,14 +6,13 @@ import Pokemon from "../../Pokemon-card/Pokemon.jsx";
 import pokemon_data from "../../data/pokemon_data/pokemon-data.js";
 import Header from "../../header/Header.jsx";
 import { getPokemon } from "../../../services/pokemonServices.js";
-// import PlayerPokemon from "./components/Pokemon-card/PlayerPokemon.jsx";
+import PlayerPokemon from "../../Pokemon-card/PlayerPokemon.jsx";
 
 const HomePage = () => {
   const [player, setPlayer] = useState({});
 
   useEffect(() => {
     // Set token in localStorage for testing
-    localStorage.setItem("token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YWMyNDIyNzgxYjkwMDgxNTRlZDAyOCIsImlhdCI6MTcyMjk2OTU0MSwiZXhwIjoxNzIyOTczMTQxfQ.dVbvqrHII5PHp4UtCyo2N_rZ2mGfTobZke0WNlsD3kE");
 
     // Fetch player data
     const handalPlayer = async () => {
@@ -36,11 +35,11 @@ const HomePage = () => {
     <div className="body">
       <Header />
       <div className="pokemonContainer">
-        <Pokemon pokemon_data={pokemon_data} stylename="custom-style-1" />
-        {/* <PlayerPokemon pokemon_data={player} stylename="custom-style-2" /> */}
-        {/* <div>
+        {/* <Pokemon pokemon_data={pokemon_data} stylename="custom-style-1" /> */}
+        <PlayerPokemon pokemon_data={player} stylename="custom-style-2" />
+        <div>
           <p>{JSON.stringify(player, null, 10)}</p>
-        </div> */}
+        </div>
       </div>
     </div>
   );
