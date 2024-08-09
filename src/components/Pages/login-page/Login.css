@@ -25,7 +25,7 @@ html {
 .login-page {
   height: 100vh;
   width: 100vw;
-  background-image: url("../../../../public/LoginBackground.jpeg");
+  background-image: url("/LoginBackground.jpeg");
   background-size: cover;
   background-position: center;
   display: flex;

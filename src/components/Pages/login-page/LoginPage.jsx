@@ -29,7 +29,7 @@ export const LoginPage = () => {
       <div className="login-container">
         <div className="glass-effect">
           <div className="logo-wrapper">
-            <img className="logo" src="../../../../public/header.png" alt="Pokémon Trainer Club logo" />
+            <img className="logo" src="/header.png" alt="Pokémon Trainer Club logo" />
           </div>
           <h2>Log in to your Pokémon Account </h2>
           <form className="sign-in-form">
