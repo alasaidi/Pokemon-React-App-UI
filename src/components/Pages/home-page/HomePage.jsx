@@ -35,8 +35,8 @@ const HomePage = () => {
     <div className="body">
       <Header />
       <div className="pokemonContainer">
-        {/* <Pokemon pokemon_data={pokemon_data} stylename="custom-style-1" /> */}
-        <PlayerPokemon pokemon_data={player} stylename="custom-style-2" />
+        <Pokemon pokemon_data={pokemon_data} stylename="custom-style-1" />
+        {/* <PlayerPokemon pokemon_data={player} stylename="custom-style-2" /> */}
       </div>
     </div>
   );

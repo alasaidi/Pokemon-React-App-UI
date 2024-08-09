@@ -1,5 +1,7 @@
 import "./pokemon-card.css";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 const Pokemon = ({ pokemon_data = {}, stylename = "" }) => {
   const [visibleItems, setVisibleItems] = useState([]);
 
@@ -25,6 +27,9 @@ const Pokemon = ({ pokemon_data = {}, stylename = "" }) => {
               <p>Abilities: {pokemon.abilities.join(", ")}</p>
             </div>
           </div>
+          <button className="pokeball-button">
+            <Link to="/pokemon">More Details</Link>
+          </button>
         </div>
       </div>
     </div>
