@@ -1,0 +1,40 @@
+.pokemon-details {
+  padding: 2rem;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(238, 21, 21, 0.5);
+  max-width: 800px;
+  margin: auto;
+}
+
+.details-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.details-header h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.details-header img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.details-content {
+  font-family: "Exo 2", sans-serif;
+  font-size: 1.2rem;
+}
+
+.details-content p {
+  margin: 0.5rem 0;
+}
+
+.details-content strong {
+  color: #f8d030;
+}

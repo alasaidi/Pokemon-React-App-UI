@@ -8,6 +8,7 @@ import "./index.css";
 import { ErrorPage } from "./components/Pages/ErrorPage/ErrorPage.jsx";
 import HomePage from "./components/Pages/home-page/HomePage.jsx";
 import { LoginPage } from "./components/Pages/login-page/LoginPage.jsx";
+import { PokemonDetails } from "./components/Pages/pokemon-details-page/PokemonDetails.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const routes = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <HomePage /> },
+      { path: "/pokemon", element: <PokemonDetails /> },
       { path: "/Login", element: <LoginPage /> },
     ],
   },
