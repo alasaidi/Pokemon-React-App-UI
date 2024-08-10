@@ -14,6 +14,9 @@ export const getPokemon = async () => {
 export const create = async (data = {}) => {
   try {
     const result = await axiosService.post("/players/api/login", data);
+    if (result.data && result.data.token) {
+      localStorage.setItem("token", result.data.token);
+    }
     return result;
   } catch (error) {
     console.error("Error Login Player:", error.response?.data || error.message);
@@ -24,6 +27,7 @@ export const create = async (data = {}) => {
 export const logout = async () => {
   try {
     const result = await axiosService.get("/players/api/logout");
+    localStorage.removeItem("token");
     return result;
   } catch (err) {
     console.error("Error Logout Player:", err.response?.data || err.message);
