@@ -54,7 +54,7 @@ const HomePage = () => {
       <div className="button-container">
         <Button style={!isLogin ? "login" : "logout"} action={handleAuth} />
       </div>
-      <div className="pokemonContainer">
+      <div>
         {/* <p>{JSON.stringify(pokemonData, null, 2)}</p>
         {isLogin ? <p>true</p> : <p>false</p>} */}
         {isLogin ? <PlayerPokemon pokemon_data={pokemonData} stylename="custom-style-2" /> : <Pokemon pokemon_data={pokemonData} stylename="custom-style-1" />}

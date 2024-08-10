@@ -6,7 +6,12 @@
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   margin: 10px 0;
 }
-
+.pokemonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
 .container.visible {
   opacity: 1;
   transform: translateY(0);
@@ -167,4 +172,40 @@
 .pokeball-button a {
   text-decoration: none;
   color: #fff;
+}
+
+.welcome {
+  text-align: center;
+
+  backdrop-filter: blur(10px);
+}
+
+.welcome h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(238, 21, 21, 0.8);
+  margin-bottom: 10px;
+  animation: glow 3s infinite;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(238, 21, 21, 0.5), 0 0 10px rgba(238, 21, 21, 0.5), 0 0 20px rgba(238, 21, 21, 0.5), 0 0 40px rgba(238, 21, 21, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(238, 21, 21, 0.8), 0 0 20px rgba(238, 21, 21, 0.8), 0 0 30px rgba(238, 21, 21, 0.8), 0 0 50px rgba(238, 21, 21, 1);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(238, 21, 21, 0.5), 0 0 10px rgba(238, 21, 21, 0.5), 0 0 20px rgba(238, 21, 21, 0.5), 0 0 40px rgba(238, 21, 21, 0.5);
+  }
+}
+
+.welcome p {
+  font-family: "Exo 2", sans-serif;
+  font-size: 1.5rem;
+  text-decoration: double;
+  font-weight: 600;
+  color: #f8d030;
+  letter-spacing: 1px;
 }
