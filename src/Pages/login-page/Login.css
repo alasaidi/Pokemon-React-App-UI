@@ -84,6 +84,11 @@ h2 {
   font-family: "Flexo-Heavy", sans-serif;
   cursor: pointer;
   transition: background-color 0.3s;
+  justify-self: center;
+}
+.sign-in-button {
+  display: flex;
+  justify-content: center;
 }
 
 .button:hover {
