@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { create } from "../../../services/pokemonServices";
-
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 export const LoginPage = () => {
+  const navigate = useNavigate();
   const [request, setRequest] = useState({
     email: "",
     password: "",
@@ -17,7 +18,7 @@ export const LoginPage = () => {
     try {
       const result = await create(request);
       console.log("Player created:", result.data);
-
+      navigate("/");
       // Clear the form or show a success message
     } catch (error) {
       console.error("Failed to create Player:", error);
@@ -42,7 +43,7 @@ export const LoginPage = () => {
               </div>
             </div>
             <button type="button" className="button sign-in-button" id="accept" value="Log In" onClick={handleSubmit}>
-              Log In
+              LOGIN
             </button>
           </form>
         </div>
