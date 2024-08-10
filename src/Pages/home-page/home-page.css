@@ -8,12 +8,7 @@
   font-family: "Times New Roman", Times, serif;
   text-align: center;
 }
-.pokemonContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  justify-content: center;
-}
+
 .button-container {
   display: flex;
   justify-content: flex-end;

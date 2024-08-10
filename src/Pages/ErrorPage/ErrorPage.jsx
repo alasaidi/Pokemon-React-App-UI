@@ -2,7 +2,7 @@
 
 import "./ErrorPage.css";
 import { useRouteError } from "react-router";
-import Header from "../../header/Header.jsx";
+import Header from "../../components/header/Header";
 export const ErrorPage = () => {
   const error = useRouteError;
   return (
