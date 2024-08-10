@@ -42,9 +42,11 @@ export const LoginPage = () => {
                 <input className="input password-input" type="text" id="password" name="password" placeholder="Password" value={request.password} onChange={handleInput} />
               </div>
             </div>
-            <button type="button" className="button sign-in-button" id="accept" value="Log In" onClick={handleSubmit}>
-              LOGIN
-            </button>
+            <div className="sign-in-button">
+              <button type="button" className="button sign-in-button" id="accept" value="Log In" onClick={handleSubmit}>
+                LOGIN
+              </button>
+            </div>
           </form>
         </div>
       </div>

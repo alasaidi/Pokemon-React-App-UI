@@ -26,33 +26,35 @@ const Pokemon = ({ pokemon_data = [], stylename = "" }) => {
 
   return (
     <>
-      {isModal && <Modal action={toggleModal} data={modalItem.current} />}
-      {pokemon_data.map((pokemon) => (
-        <div className={`container ${stylename} ${visibleItems.includes(pokemon.id) ? "visible" : ""}`} key={pokemon.id}>
-          <div className="character-card">
-            <div className="image-container">
-              <img src={pokemon.picture} alt={pokemon.name} />
-            </div>
-            <div className="details-container">
-              <div className="name-description">
-                <h2>{pokemon.name}</h2>
-                <p>{Array.isArray(pokemon.type) ? pokemon.type.join(", ") : pokemon.type}</p>
-                <div className="abilities-description">
-                  <p>Abilities: {Array.isArray(pokemon.abilities) ? pokemon.abilities.join(", ") : pokemon.abilities}</p>
-                </div>
+      <div className="pokemonContainer">
+        {isModal && <Modal action={toggleModal} data={modalItem.current} />}
+        {pokemon_data.map((pokemon) => (
+          <div className={`container ${stylename} ${visibleItems.includes(pokemon.id) ? "visible" : ""}`} key={pokemon.id}>
+            <div className="character-card">
+              <div className="image-container">
+                <img src={pokemon.picture} alt={pokemon.name} />
               </div>
-              <button
-                className="pokeball-button"
-                onClick={() => {
-                  toggleModal();
-                  modalItem.current = pokemon;
-                }}>
-                More Details
-              </button>
+              <div className="details-container">
+                <div className="name-description">
+                  <h2>{pokemon.name}</h2>
+                  <p>{Array.isArray(pokemon.type) ? pokemon.type.join(", ") : pokemon.type}</p>
+                  <div className="abilities-description">
+                    <p>Abilities: {Array.isArray(pokemon.abilities) ? pokemon.abilities.join(", ") : pokemon.abilities}</p>
+                  </div>
+                </div>
+                <button
+                  className="pokeball-button"
+                  onClick={() => {
+                    toggleModal();
+                    modalItem.current = pokemon;
+                  }}>
+                  More Details
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </>
   );
 };
