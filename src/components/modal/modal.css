@@ -1,0 +1,105 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+.pokemon-details {
+  padding: 2rem;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(238, 21, 21, 0.5);
+  max-width: 200px;
+  margin: auto;
+}
+
+.details-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.details-header h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.details-header img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.details-content {
+  font-family: "Exo 2", sans-serif;
+  font-size: 1.2rem;
+}
+
+.details-content p {
+  margin: 0.5rem 0;
+}
+
+.details-content strong {
+  color: #f8d030;
+}
+.pokemon-close-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ee1515; /* Pokéball red */
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.pokemon-close-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: all 0.4s;
+}
+
+.pokemon-close-btn:hover {
+  background-color: #cc0000; /* Darker red on hover */
+  transform: rotate(90deg);
+}
+
+.pokemon-close-btn:hover::before {
+  left: 100%;
+}
+
+.pokemon-close-btn:active {
+  transform: rotate(90deg) scale(0.95);
+}
+
+.pokemon-close-btn .bi-x {
+  transition: all 0.3s ease;
+}
+
+.pokemon-close-btn:hover .bi-x {
+  transform: scale(1.2);
+}

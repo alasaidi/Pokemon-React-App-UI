@@ -5,10 +5,10 @@ import { RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
 
-import { ErrorPage } from "./components/Pages/ErrorPage/ErrorPage.jsx";
-import HomePage from "./components/Pages/home-page/HomePage.jsx";
-import { LoginPage } from "./components/Pages/login-page/LoginPage.jsx";
-import { PokemonDetails } from "./components/Pages/pokemon-details-page/PokemonDetails.jsx";
+import { ErrorPage } from "./Pages/ErrorPage/ErrorPage.jsx";
+import HomePage from "./Pages/home-page/HomePage.jsx";
+import { LoginPage } from "./Pages/login-page/LoginPage.jsx";
+import { PokemonDetails } from "./Pages/pokemon-details-page/PokemonDetails.jsx";
 
 const routes = createBrowserRouter([
   {
