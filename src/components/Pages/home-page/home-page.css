@@ -10,7 +10,19 @@
 }
 .pokemonContainer {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   gap: 20px;
   justify-content: center;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.button-container .button {
+  max-width: 120px;
 }

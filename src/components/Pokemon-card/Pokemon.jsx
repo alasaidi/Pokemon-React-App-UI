@@ -31,7 +31,7 @@ const Pokemon = ({ pokemon_data = [], stylename = "" }) => {
             <h2>{pokemon.name}</h2>
             <p>{Array.isArray(pokemon.type) ? pokemon.type.join(", ") : pokemon.type}</p>
             <div className="abilities-description">
-              <p>Abilities: {pokemon.abilities.join(", ")}</p>
+              <p>Abilities: {Array.isArray(pokemon.abilities) ? pokemon.abilities.join(", ") : pokemon.abilities}</p>
             </div>
           </div>
           <button className="pokeball-button">
