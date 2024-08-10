@@ -12,7 +12,8 @@ const Pokemon = ({ pokemon_data = {}, stylename = "" }) => {
       }, index * 500); // 500ms delay between each item
     });
   }, [pokemon_data]);
-
+  console.log("test  ", pokemon_data);
+  if (!Array.isArray(pokemon_data) || pokemon_data.length === 0) return null;
   return pokemon_data.map((pokemon) => (
     <div className={`container ${stylename} ${visibleItems.includes(pokemon.id) ? "visible" : ""}`} key={pokemon.id}>
       <div className="character-card">
