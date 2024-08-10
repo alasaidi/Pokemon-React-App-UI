@@ -9,37 +9,35 @@ import { getPokemon, logout } from "../../../services/pokemonServices.js";
 import PlayerPokemon from "../../Pokemon-card/PlayerPokemon.jsx";
 
 const HomePage = () => {
-  const [player, setPlayer] = useState({});
+  const [pokemonData, setPokemonData] = useState([]);
   const [isLogin, setIsLogin] = useState(false);
 
   useEffect(() => {
     // Fetch player data
     const handalPlayer = async () => {
-      const token = localStorage.getItem("authToken");
-      if (token) {
-        setIsLogin(true);
-      }
-
+      const token = localStorage.getItem("token");
+      setIsLogin(!!token);
       try {
-        const players = await getPokemon();
-        setPlayer(players);
+        const data = await getPokemon();
+        setPokemonData(data);
       } catch (error) {
         console.error("Error fetching player data:", error);
+        setPokemonData([]);
       }
     };
 
     handalPlayer();
   }, []);
 
-  useEffect(() => {
-    console.log("Updated player state:", player);
-  }, [player]);
-
   const handalLogout = async () => {
     try {
       await logout();
-      localStorage.removeItem("authToken");
+      localStorage.removeItem("token");
       setIsLogin(false);
+      const data = await getPokemon();
+      setPokemonData(data);
+
+      // Reset player data to an empty array
     } catch (error) {
       console.error("Error during logout:", error);
     }
@@ -48,10 +46,10 @@ const HomePage = () => {
   return (
     <div className="body">
       <Header />
-      <button onClick={handalLogout}>logout</button>
       <div className="pokemonContainer">
-        <p>{JSON.stringify(player, null, 2)}</p>
-        {isLogin ? <PlayerPokemon pokemon_data={player} stylename="custom-style-2" onLogout={handalLogout} /> : <Pokemon pokemon_data={player} stylename="custom-style-1" />}
+        {/* <p>{JSON.stringify(pokemonData, null, 2)}</p>
+        {isLogin ? <p>true</p> : <p>false</p>} */}
+        {isLogin ? <PlayerPokemon pokemon_data={pokemonData} stylename="custom-style-2" onLogout={handalLogout} /> : <Pokemon pokemon_data={pokemonData} stylename="custom-style-1" />}
       </div>
     </div>
   );

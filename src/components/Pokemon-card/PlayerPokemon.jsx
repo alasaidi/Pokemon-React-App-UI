@@ -9,9 +9,9 @@ const PlayerPokemon = ({ pokemon_data = [], stylename = "", onLogout }) => {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 500);
-
     return () => clearTimeout(timer);
   }, []);
+
   console.log("test  ", pokemon_data);
   if (!Array.isArray(pokemon_data) || pokemon_data.length === 0) return null;
 
@@ -20,7 +20,7 @@ const PlayerPokemon = ({ pokemon_data = [], stylename = "", onLogout }) => {
       <button onClick={onLogout}>logout</button>
 
       {pokemon_data.map((data) => (
-        <div className={`container ${stylename} ${isVisible ? "visible" : ""}`} key={pokemon_data._id || data._id}>
+        <div className={`container ${stylename} ${isVisible ? "visible" : ""}`} key={data._id}>
           <div className="character-card">
             <div className="image-container">
               <img src={data.pokemon.picture} alt={data.pokemon.name} />
@@ -29,6 +29,9 @@ const PlayerPokemon = ({ pokemon_data = [], stylename = "", onLogout }) => {
               <div className="name-description">
                 <h2>{data.pokemon.name}</h2>
                 <p>{data.pokemon.type.join(", ")}</p>
+                <p>Nickname: {data.nickname}</p>
+                <p>Level: {data.level}</p>
+                <p>Experience: {data.experience}</p>
               </div>
             </div>
           </div>
