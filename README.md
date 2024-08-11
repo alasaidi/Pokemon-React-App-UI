@@ -26,6 +26,16 @@ Here are some screenshots from the application to give you a visual overview of 
 <img src="public\ReadMe-UI\welcome.PNG">
 *Description: A user's personal collection of caught Pokemon.*
 
+## Overview
+
+This client-side application works in conjunction with a server-side application to create a full-stack Pokémon management system.
+
+### Related Repositories
+
+- **Server-side Repository**: [Link to the server-side repository](https://github.com/alasaidi/Pokemon-app-server-side)
+
+Please refer to the server-side repository for instructions on setting up and running the back-end of the application.
+
 ## Client-Side Features
 
 - View a list of Pokemon
