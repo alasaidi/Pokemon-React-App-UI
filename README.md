@@ -7,23 +7,23 @@ This project is a full-stack Pokemon-themed application with a React frontend an
 Here are some screenshots from the application to give you a visual overview of its features:
 
 ### Home Page
-![Home Page](public\ReadMe-UI\homepage.PNG)
+<img src="public\ReadMe-UI\homepage.PNG">
 *Description: The home page displays a list of Pokemon or the user's collection.*
 
 ### Login Page
-![Login Page](public\ReadMe-UI\LoginPgae.PNG)
+<img src="public\ReadMe-UI\LoginPgae.PNG">
 *Description: The login interface for user authentication.*
 
 ### Pokemon Cards
-![Pokemon Details](public\ReadMe-UI\pokemon-container.PNG)
+<img src="public\ReadMe-UI\pokemon-container.PNG">
 *Description: Detailed view of Pokemon Cards.*
 
 ### Pokemon Details Modal
-![Pokemon Details](public\ReadMe-UI\modal.PNG)
+<img src="public\ReadMe-UI\modal.PNG">
 *Description: A modal window showing detailed information about a specific Pokemon, including its stats, abilities, and other characteristics. This appears when a user clicks on a Pokemon card.*
 
 ### User Collection
-![User Collection](public\ReadMe-UI\welcome.PNG)
+<img src="public\ReadMe-UI\welcome.PNG">
 *Description: A user's personal collection of caught Pokemon.*
 
 ## Client-Side Features
@@ -189,7 +189,3 @@ Contributions are welcome. Please fork the repository and create a pull request 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
-
-
-
